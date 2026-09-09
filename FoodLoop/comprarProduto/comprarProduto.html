@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="../fotos/FoodLoop Logo 2.png">
+    <link rel="stylesheet" href="comprarProduto.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="produtoNome">Nome do Produto</h1>
+
+        <div class="produto-info">
+            <img id="produtoImagem" src="" alt="Imagem do Produto" class="produto-imagem">
+
+            <p><strong>Marca:</strong> <span id="produtoMarca">Marca do Produto</span></p>
+            <p><strong>Preço:</strong> <span id="produtoPreco">R$ 0,00</span></p>
+            <p><strong>Cidade:</strong> <span id="produtoCidade">Cidade</span></p>
+            <p><strong>Estado:</strong> <span id="produtoEstado">Estado</span></p>
+            <p><strong>Delivery:</strong> <span id="produtoDelivery">Sim/Não</span></p>
+            <p><strong>Prazo de Validade:</strong> <span id="produtoValidade">YYYY-MM-DD</span></p>
+            <p><strong>Vendedor:</strong> <a id="vendedorLink" href="#">Nome do Vendedor</a></p>
+        </div>
+
+        <button id="comprarButton" type="button">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="voltar-container">
+        <button id="voltarButton" onclick="window.location.href='../paginaInicial/paginaInicial.html'">Voltar</button>
+    </div>
+
+    <script src="../shared/app.js"></script>
+    <script src="comprarProduto.js"></script>
+</body>
+</html>

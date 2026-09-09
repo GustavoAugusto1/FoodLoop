@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="../fotos/FoodLoop Logo 2.png">
+    <link rel="stylesheet" href="carrinhoCompra.css">
+</head>
+<body>
+    <div class="carrinho-container">
+        <h1>
+            🛒 Carrinho de Compras
+        </h1>
+        
+        <table class="carrinho-tabela">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Subtotal</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="carrinhoItems">
+                <!-- Produtos serão injetados aqui pelo JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="total-container">
+            <p><strong>Total:</strong> R$ <span id="total">0,00</span></p>
+        </div>
+
+        <div class="actions">
+            <button onclick="window.location.href='../paginaInicial/paginaInicial.html'">Voltar às Compras</button>
+            <button id="checkoutButton" type="button">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="voltar-container">
+        <button id="voltarButton" onclick="window.location.href='../paginaInicial/paginaInicial.html'">Voltar</button>
+    </div>
+
+    <script src="../shared/app.js"></script>
+    <script src="carrinhoCompra.js"></script>
+</body>
+</html>

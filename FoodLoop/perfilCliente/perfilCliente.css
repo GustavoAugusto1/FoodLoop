@@ -1,0 +1,117 @@
+.voltar-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#voltarButton {
+    background-color: #218838;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#voltarButton:hover {
+    background-color: #0056b3;
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.perfil-info {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: min(420px, calc(100vw - 40px));
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+#enviarMensagem {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#enviarMensagem:hover {
+    background-color: #218838;
+}
+
+.mensagem-form {
+    margin-top: 18px;
+    text-align: left;
+}
+
+.mensagem-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.mensagem-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    resize: vertical;
+}
+
+.mensagem-form button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: #218838;
+    color: #fff;
+    cursor: pointer;
+}
+
+#mensagemStatus {
+    color: #167b3a;
+}
+
+.orders-list {
+    display: grid;
+    gap: 8px;
+}
+
+.order-card {
+    display: grid;
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+}

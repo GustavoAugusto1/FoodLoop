@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - FoodLoop</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="../fotos/FoodLoop Logo 2.png">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <main class="checkout-container">
+        <h1>Finalizar Compra</h1>
+
+        <section id="orderSummary" class="order-summary" aria-labelledby="summaryTitle">
+            <h2 id="summaryTitle">Resumo do pedido</h2>
+            <div id="checkoutItems"></div>
+            <p class="checkout-total"><strong>Total:</strong> <span id="checkoutTotal">R$ 0,00</span></p>
+        </section>
+
+        <form id="checkoutForm">
+            <label for="address">Endereço para entrega ou retirada</label>
+            <textarea id="address" rows="3" placeholder="Informe o endereço e um ponto de referência" required></textarea>
+
+            <label for="paymentMethod">Forma de pagamento</label>
+            <select id="paymentMethod" required>
+                <option value="">Selecione</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão na entrega">Cartão na entrega</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+
+            <p id="checkoutMessage" class="checkout-message" role="alert"></p>
+
+            <div class="checkout-actions">
+                <button type="button" class="secondary" onclick="window.location.href='carrinhoCompra.html'">Voltar ao carrinho</button>
+                <button type="submit" id="confirmOrderButton">Confirmar pedido</button>
+            </div>
+        </form>
+
+        <section id="orderSuccess" class="order-success" hidden>
+            <h2>Pedido confirmado!</h2>
+            <p>Seu número de acompanhamento é <strong id="orderId"></strong>.</p>
+            <button type="button" onclick="window.location.href='../paginaInicial/paginaInicial.html'">Voltar à página inicial</button>
+        </section>
+    </main>
+
+    <script src="../shared/app.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

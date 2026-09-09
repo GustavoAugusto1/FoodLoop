@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.voltar-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#voltarButton {
+    background-color: #218838;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#voltarButton:hover {
+    background-color: #0056b3;
+}
+
+.carrinho-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ajusta a largura para 90% da tela */
+}
+
+.fas.fa-shopping-cart {
+    font-size: 32px;
+    color: #333;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    gap: 10px;
+}
+
+.carrinho-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.carrinho-tabela th,
+.carrinho-tabela td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.carrinho-tabela th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.carrinho-tabela tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.carrinho-tabela input[type="number"] {
+    width: 64px;
+    padding: 6px;
+}
+
+.carrinho-tabela td button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.carrinho-tabela td button:hover {
+    background-color: #c0392b;
+}
+
+.total-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.total-container p {
+    font-size: 20px;
+    color: #333;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions button {
+    background-color: #218838;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.actions button:hover {
+    background-color: #218838;
+}
+
+.actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.empty-cart {
+    padding: 30px 10px !important;
+    color: #666;
+    text-align: center !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrinho-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .carrinho-tabela th,
+    .carrinho-tabela td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .carrinho-tabela {
+        font-size: 14px;
+    }
+
+    .total-container p {
+        font-size: 18px;
+    }
+
+    .actions button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .total-container p {
+        font-size: 16px;
+    }
+
+    .actions button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .carrinho-tabela th,
+    .carrinho-tabela td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* Transformar tabela em lista para dispositivos móveis */
+    .carrinho-tabela, .carrinho-tabela thead, .carrinho-tabela tbody, .carrinho-tabela th, .carrinho-tabela td, .carrinho-tabela tr {
+        display: block;
+    }
+
+    .carrinho-tabela tr {
+        margin-bottom: 10px;
+    }
+
+    .carrinho-tabela td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .carrinho-tabela td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
